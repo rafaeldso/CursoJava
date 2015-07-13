@@ -4,13 +4,15 @@ class TestaCasa{
 		
 		Casa casa = new Casa();
 		casa.pinta("Azul");
-		casa.porta1 = new Porta();
-		casa.porta2 = new Porta();
-		casa.porta3 = new Porta();
+		casa.portas = new Porta[5];
+		Porta p1 = new Porta();
+		casa.adicionaPortas(p1);
+		Porta p2 = new Porta();
+		casa.adicionaPortas(p2);
 		
-		casa.porta1.abre();
-		casa.porta2.fecha();
-		casa.porta3.abre();
+		casa.portas[0].abre();
+		casa.portas[1].fecha();
+		casa.portas[1].abre();
 		
 		System.out.println(casa.quantasPortasEstaoAbertas());
 		

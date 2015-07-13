@@ -6,11 +6,13 @@ public class Funcionario{
 	private Data dataDeEntrada;
 	private String rg;
 	private boolean estaNaEmpresa;
+	private static int identificador;
 
 	public Funcionario(){
-
+		identificador++;
 	}
 	public Funcionario(String nome){
+		this();
 		this.nome = nome;
 	}
 
@@ -19,9 +21,8 @@ public class Funcionario{
 		this.salario = this.salario + valor;
 	}
 
-	double calculaGanhoAnual(){
+	double getGanhoAnual(){
 		return (salario*12);
-
 	}
 
 	void demite(){
@@ -58,11 +59,14 @@ public class Funcionario{
 	public void setRG(String rg){
 		this.rg = rg;
 	}
-	public boolean getEstaNaEmpresa(){
+	public boolean isEstaNaEmpresa(){
 		return this.estaNaEmpresa;
 	}
 	public void setEstaNaEmpresa(boolean valor){
 		this.estaNaEmpresa = valor;
+	}
+	public int getIdentificador(){
+		return this.identificador;
 	}
 
 	public void mostra(){
@@ -71,7 +75,8 @@ public class Funcionario{
 		System.out.println("Salario: "+this.getSalario());
 		System.out.println("RG: "+this.getRG());
 		System.out.println("Data de Entrada: "+this.getDataDeEntrada());
-		System.out.println("Está na empresa: "+this.getEstaNaEmpresa());
+		System.out.println("Está na empresa: "+this.isEstaNaEmpresa());
+		System.out.println("Identificador de funcionário: "+this.getIdentificador());
 
 	}
 	

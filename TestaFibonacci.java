@@ -14,6 +14,12 @@ class TestaFibonacci{
 		for(int i = 1; i <= 10; i++){
 		System.out.println(fb1.calculaFibonacci(i));
 		}
+		
+		DesafioFibonacciVetor fb2 = new DesafioFibonacciVetor();
+		
+		for(int i = 1; i <= 10; i++){
+		System.out.println(fb2.calculaFibonacci(i));
+		}
 	}
 	
 }
