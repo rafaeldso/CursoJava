@@ -1,0 +1,5 @@
+class TesteAreaCalculavel{
+	public static void main(){
+	
+	}
+}

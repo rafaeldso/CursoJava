@@ -1,6 +1,12 @@
 public class ContaCorrente extends Conta{
 	
+	public ContaCorrente(){
+		
+	}
+	public ContaCorrente(String titular, int numero, int agencia){
+		super(titular,numero,agencia);
+	}
 	public void atualiza(double taxa){
-		this.deposita(this.getSaldo() * (taxa*2));
+		this.setSaldo(this.getSaldo() * (taxa*2));
 	}
 }

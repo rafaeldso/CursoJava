@@ -1,4 +1,4 @@
-class Conta{
+public abstract class Conta{
 	
 	private String titular;
 	private int numero;
@@ -16,9 +16,8 @@ class Conta{
 		this.agencia = agencia;
 		Conta.numContas++;
 	}
-	public void atualiza(double taxa){
-		this.saldo += this.saldo * taxa;
-	}
+	public abstract void atualiza(double taxa);
+	
 	public boolean saca(double valor){
 		if(saldo > valor){
 			saldo -= valor;
@@ -39,6 +38,7 @@ class Conta{
 		return this.numero;
 	}
 	public void setNumero(int numero){
+		this.atualiza();
 		this.numero = numero;
 	}
 	public void setTitular(String titular){

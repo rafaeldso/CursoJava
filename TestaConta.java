@@ -2,13 +2,13 @@ class TestaConta{
 
 		public static void main(String [] args){
 
-			Conta c1 = new Conta("Rafael", 1234, 4321);
-			Conta c2 = new Conta("Maria", 4321, 3456);
+			Conta c1 = new ContaCorrente("Rafael", 1234, 4321);
+			Conta c2 = new ContaPoupanca("Maria", 4321, 3456);
 
 			int num = Conta.getNumContas();
 			System.out.println(num);
 			
-			Conta c = new Conta();
+			Conta c = new ContaCorrente();
 			ContaCorrente cc = new ContaCorrente();
 			ContaPoupanca cp = new ContaPoupanca();
 			
