@@ -1,4 +1,4 @@
-public class ContaCorrente extends Conta{
+public class ContaCorrente extends Conta implements Tributavel{
 	
 	public ContaCorrente(){
 		
@@ -8,5 +8,9 @@ public class ContaCorrente extends Conta{
 	}
 	public void atualiza(double taxa){
 		this.setSaldo(this.getSaldo() * (taxa*2));
+	}
+	
+	public double calculaTributos(){
+		return this.getSaldo() * 0.01;
 	}
 }
